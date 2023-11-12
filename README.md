@@ -11,6 +11,6 @@
 - En bref: When a program has to be executed, it is loaded into the memor, from there, the Control Unit fetches one instruction at a time, using the Instruction Pointer Register, and the Arithmetic Logic Unit executes it,the results are either stored in the Registers or the RAM.
 
 ## Registers
-- ** Instruction Pointer **: pointer to the next instruction to be executed by the CPU.(EIP for 32bit, RIP for 64bit)
+- **Instruction Pointer**: pointer to the next instruction to be executed by the CPU.(EIP for 32bit, RIP for 64bit)
 
-- ** General-Purpose Registers **: 
+- **General-Purpose Registers**: 
