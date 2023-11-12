@@ -13,4 +13,10 @@
 ## Registers
 - **Instruction Pointer**: pointer to the next instruction to be executed by the CPU.(EIP for 32bit, RIP for 64bit)
 
-- **General-Purpose Registers**: 
+- **General-Purpose Registers**: (32bits/64bits)
+![plot](./General_purpose_registers.png)
+- used during the general execution of instruction by the CPU.
+- for 64bits (extended registers):
+    - **EAX or RAX(Accumulator Register)** : 
+        - stores results of Arithmetic Operations.
+        - last 16 bits of this register can be accessed by addressing **AX**. Similarly, it can also be addressed in 8 bits by using **AL** for the lower 8 bits and **AH** for the higher 8 bits
