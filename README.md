@@ -1,5 +1,5 @@
 # x86 Architecture 
-
+![plot](./Architecture.png)
 ## CPU Archi
 - (I/O Devices) <=> (CPU: Registers <=> Arithmetic Logic Unit <=> Control Unit) <=> (Main Memory RAM)
 - Control Unit => takes instructions from RAM, EIP (Instruction Pointer)
