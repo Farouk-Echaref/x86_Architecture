@@ -29,3 +29,10 @@
         ```
     - **EBX or RBX(Base Register)** :
         - In the context of memory addressing, it can serve as a base address for data structures or arrays.
+        - The base register is often used in combination with an offset to calculate memory addresses. This is known as effective address computation.
+        - For example, if you have an array in memory, the base register might hold the starting address of the array, and an offset can be added to it to access a specific element.
+        ```assembly
+        ; Example of using EBX as a base register for memory addressing
+        mov ebx, offset myArray   ; Set EBX to the base address of myArray
+        mov eax, [ebx + 4]        ; Load the value at the address (EBX + 4) into EAX
+        ```
