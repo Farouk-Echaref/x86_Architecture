@@ -130,3 +130,12 @@
         mov ecx, num_bytes        ; Set ECX to the number of bytes to copy
         rep movsb                 ; Repeat the move byte operation (copying bytes from [ESI] to [EDI])
         ```
+    
+    - **R8-R15(Extended Registers)** :
+        - These 64-bit general-purpose registers are not present in 32-bit systems. They were introduced in the 64-bit systems. They are also addressable in 32-bit, 16-bit, and 8-bit modes. For example, for the R8 register, we can use R8D for lower 32-bit addressing, R8W for lower 16-bit addressing, and R8B for lower 8-bit addressing. Here, the suffix D stands for Double-word, W stands for Word, and B stands for Byte.
+
+        ```assembly
+        ; Example of using R8-R15 for general-purpose operations
+        mov r8, 100       ; Set R8 to the value 100
+        add r9, r8, 50    ; Add 50 to the value in R8 and store the result in R9
+        ```
