@@ -53,3 +53,13 @@
             ; Decrement ECX and check if it's zero
             loop loop_start
         ```
+    - **EDX or RDX(Data Register)**: 
+        - The data register (EDX/ RDX) is a general-purpose register that can be used for various operations, including data manipulation, arithmetic operations, logical operations, and more.
+        - Unlike registers with specific historical uses (e.g., EAX as an accumulator, ECX as a loop counter), EDX/RDX does not have a specialized role and can be employed for a wide range of tasks.
+        - The data register is often involved in division operations. For example, in a 32-bit division operation, EDX:EAX is used to represent a 64-bit dividend, and EDX receives the remainder.
+
+        ```assembly
+        ; Example of using EDX for data manipulation
+        mov edx, 10      ; Set EDX to the value 10
+        add edx, 5       ; Add 5 to the value in EDX
+        ```
