@@ -53,6 +53,7 @@
             ; Decrement ECX and check if it's zero
             loop loop_start
         ```
+
     - **EDX or RDX(Data Register)**: 
         - The data register (EDX/ RDX) is a general-purpose register that can be used for various operations, including data manipulation, arithmetic operations, logical operations, and more.
         - Unlike registers with specific historical uses (e.g., EAX as an accumulator, ECX as a loop counter), EDX/RDX does not have a specialized role and can be employed for a wide range of tasks.
@@ -62,4 +63,17 @@
         ; Example of using EDX for data manipulation
         mov edx, 10      ; Set EDX to the value 10
         add edx, 5       ; Add 5 to the value in EDX
+        ```
+
+    - **ESP or RSP(Stack Pointer)**:
+        - The stack pointer is specifically dedicated to managing the stack. It points to the top of the stack, indicating the current location where data can be pushed onto or popped from the stack and is used in conjunction with the Stack Segment register.
+        - ***Push Operation***: When data needs to be added to the stack, the stack pointer is decremented, and the data is stored at the new location pointed to by the stack pointer.
+        - ***Pop Operation***: When data is removed from the stack, the data at the current stack pointer location is retrieved, and the stack pointer is incremented.
+        - The stack is commonly used to manage function calls. When a function is called, the return address and local variables are often pushed onto the stack. Upon returning from the function, the stack pointer is adjusted to remove this data.
+        - The stack is also used in context switching between different threads or processes. The stack pointer is saved as part of the thread or process context, allowing a different execution context to be restored later.
+
+        ```assembly
+        ; Example of using ESP for stack operations
+        push eax         ; Push the value in EAX onto the stack
+        pop ebx          ; Pop the value from the stack into EBX
         ```
