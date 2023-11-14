@@ -20,3 +20,12 @@
     - **EAX or RAX(Accumulator Register)** : 
         - stores results of Arithmetic Operations.
         - last 16 bits of this register can be accessed by addressing **AX**. Similarly, it can also be addressed in 8 bits by using **AL** for the lower 8 bits and **AH** for the higher 8 bits
+
+        ```assembly
+        ; Example of adding two values and storing the result in EAX
+        mov eax, 5       ; Move the value 5 into EAX
+        add eax, 7       ; Add 7 to the value in EAX
+        ; Result (12) is now in EAX
+        ```
+    - **EBX or RBX(Base Register)** :
+        - In the context of memory addressing, it can serve as a base address for data structures or arrays.
