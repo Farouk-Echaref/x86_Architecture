@@ -96,3 +96,20 @@
         ; ...
         pop ebp          ; Restore the previous value of EBP from the stack
         ```
+
+    - **ESI or RSI(Source Index)** :
+        - source index register, often referred to as ESI (32-bit) or RSI (64-bit), is a general-purpose register in x86 and x86-64 architectures. It is commonly used as a source index during string operations, memory copy operations, and certain data manipulation tasks.
+        - The source index register is typically used in conjunction with the destination index register (EDI/RDI) in string operations and memory copy operations.
+        - It serves as a source index when copying data from one memory location to another.
+        - During string operations (like rep movs or rep cmps), the source index register is often used to point to the source string or memory location.
+        - It is commonly involved in memory copy operations, where blocks of data need to be copied from one location to another.
+        - While its primary use is in string and memory operations, the source index register can be repurposed for general data manipulation tasks.
+        - It can be used as a general-purpose register when not involved in string or memory operations.
+
+        ```assembly
+        ; Example of using ESI in a memory copy operation
+        mov esi, source_address   ; Set ESI to the source memory address
+        mov edi, dest_address     ; Set EDI to the destination memory address
+        mov ecx, num_bytes        ; Set ECX to the number of bytes to copy
+        rep movsb                 ; Repeat the move byte operation (copying bytes from [ESI] to [EDI])
+        ```
