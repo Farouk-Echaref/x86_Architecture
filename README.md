@@ -113,3 +113,20 @@
         mov ecx, num_bytes        ; Set ECX to the number of bytes to copy
         rep movsb                 ; Repeat the move byte operation (copying bytes from [ESI] to [EDI])
         ```
+    
+    -  **EDI or RDI(Destination Index)** :
+        - The destination index register, often referred to as EDI (32-bit) or RDI (64-bit), is a general-purpose register in x86 and x86-64 architectures. It is commonly used as a destination index during string operations, memory copy operations, and certain data manipulation tasks.
+        - The destination index register is typically used in conjunction with the source index register (ESI/RSI) in string operations and memory copy operations.
+        - It serves as a destination index when copying data from one memory location to another.
+        - During string operations (like rep movs or rep cmps), the destination index register is often used to point to the destination string or memory location.
+        - It is commonly involved in memory copy operations, where blocks of data need to be copied from one location to another.
+        - While its primary use is in string and memory operations, the destination index register can be repurposed for general data manipulation tasks.
+        - It can be used as a general-purpose register when not involved in string or memory operations.
+
+        ```assembly
+        ; Example of using EDI in a memory copy operation
+        mov esi, source_address   ; Set ESI to the source memory address
+        mov edi, dest_address     ; Set EDI to the destination memory address
+        mov ecx, num_bytes        ; Set ECX to the number of bytes to copy
+        rep movsb                 ; Repeat the move byte operation (copying bytes from [ESI] to [EDI])
+        ```
