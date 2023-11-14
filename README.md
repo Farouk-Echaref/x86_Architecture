@@ -77,3 +77,22 @@
         push eax         ; Push the value in EAX onto the stack
         pop ebx          ; Pop the value from the stack into EBX
         ```
+
+    - **EBP or RBP(Base Pointer)** :
+        - The base pointer register, often referred to as EBP (32-bit) or RBP (64-bit), is another general-purpose register in x86 and x86-64 architectures. It is commonly used as a frame pointer in the context of function calls and stack-based memory access. The base pointer helps facilitate access to local variables and parameters within a function's stack frame.
+        - The base pointer is typically used as a frame pointer in the context of function calls. It helps establish a stable reference point within the stack frame, making it easier to access local variables and parameters.
+        - In function prolog (at the beginning of a function), the base pointer is typically pushed onto the stack to save its previous value.
+        - The base pointer is then often set to the current stack pointer (ESP/RSP) value, establishing a reference point for the function's stack frame.
+        - Local variables and parameters are accessed relative to the base pointer.
+        - In the function epilog (at the end of a function), the base pointer is restored to its original value, typically by popping it from the stack.
+        - The base pointer simplifies access to local variables and parameters within a function by providing a fixed reference point.
+        - Instead of using the stack pointer directly, the base pointer allows for more straightforward addressing of variables, making the code more readable and maintainable.
+
+        ```assembly
+        ; Example of using EBP as a base pointer
+        push ebp         ; Save the previous value of EBP on the stack
+        mov ebp, esp     ; Set EBP to the current value of ESP, establishing the stack frame
+        ; Access local variables and parameters using [ebp + offset]
+        ; ...
+        pop ebp          ; Restore the previous value of EBP from the stack
+        ```
