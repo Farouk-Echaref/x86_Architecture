@@ -148,9 +148,18 @@ When performing execution, some indication about the status of the execution is 
         1. ***Set and Clear***:
         - The Zero Flag is set (ZF=1) when the result of an operation is zero.
         - The Zero Flag is cleared (ZF=0) when the result of an operation is non-zero.
+        (For example, if an instruction is executed that subtracts a RAX from itself, the result will be 0. In this situation, the ZF will be set to 1.)
 
         2. ***Operations***:
+        - `Arithmetic Operations`: After arithmetic operations like addition, subtraction, multiplication, and division, the Zero Flag reflects whether the result is zero.
+        - `Logical Operations`: After logical operations like AND, OR, XOR, and bit shifts, the Zero Flag reflects whether the result is zero.
+
+        3. ***Conditional Jump and Branch Instructions***:
+        - The Zero Flag is often used in conditional jump and branch instructions to determine whether to jump to a particular location in the code based on whether the result of a previous operation was zero or not.
 
         ```assembly
-
+        ; Example of using the Zero Flag
+        mov eax, 0        ; Set EAX to 0
+        test eax, eax      ; Perform a bitwise AND operation, affecting the Zero Flag
+        ; After the test, ZF is set because the result is zero
         ```
