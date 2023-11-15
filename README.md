@@ -171,3 +171,11 @@ When performing execution, some indication about the status of the execution is 
         test eax, eax      ; Perform a bitwise AND operation, affecting the Zero Flag
         ; After the test, ZF is set because the result is zero
         ```
+        <br>
+        - Conditional Jump exemple:
+        
+        ```assembly
+        ; Example of using the Zero Flag in a conditional jump
+        cmp ebx, ecx      ; Compare EBX and ECX
+        je  equal_label    ; Jump to 'equal_label' if the Zero Flag is set (i.e., if EBX equals ECX)
+        ```
