@@ -139,3 +139,18 @@
         mov r8, 100       ; Set R8 to the value 100
         add r9, r8, 50    ; Add 50 to the value in R8 and store the result in R9
         ```
+
+- **Status Flag Registers**: (32bits/64bits)
+![plot](./Flags.png)
+When performing execution, some indication about the status of the execution is sometimes required. This is where the Status Flags come in. This is a single 32-bit register for 32-bit systems called `EFLAGS`, which is extended to 64-bits for 64-bit systems, and called `RFLAGS` in the 64-bit system. The status flags register consists of individual single-bit flags that can be either 1 or 0. Some of the necessary flags are discussed below:
+    - **Zero Flag(ZF):** : 
+        - The Zero Flag (ZF) specifically indicates whether the result of an operation is zero or not. 
+        1. ***Set and Clear***:
+        - The Zero Flag is set (ZF=1) when the result of an operation is zero.
+        - The Zero Flag is cleared (ZF=0) when the result of an operation is non-zero.
+
+        2. ***Operations***:
+
+        ```assembly
+
+        ```
